@@ -1,0 +1,15 @@
+[package]
+name = "db"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "chrono", "migrate"] }
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1"
+sim-core = { path = "../sim-core" }
+serde_json = { version = "1", features = ["float_roundtrip"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+rand = "0.8"

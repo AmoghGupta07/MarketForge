@@ -1,0 +1,21 @@
+[package]
+name = "cli"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "econsim"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+sqlx = { version = "0.7", features = ["postgres"] }
+sim-core = { path = "../sim-core" }
+db = { path = "../db" }
+anyhow = "1"
+chrono = "0.4"
+ratatui = "0.29"
+crossterm = { version = "0.28", features = ["event-stream"] }
+futures-util = "0.3"
+dotenvy = "0.15"
+rand = "0.8"
